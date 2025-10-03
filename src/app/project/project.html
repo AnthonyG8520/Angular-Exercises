@@ -1,0 +1,15 @@
+<!-- project.component.html -->
+
+<div>
+  @for (project of projects; track project.id){
+    <div class="project">
+      <h3>{{project.name}}</h3>
+      <p>{{project.description}}</p>
+      @if(project.status === "Completed"){
+        <span>Completed</span>
+      }@else{
+        <span>In Progress</span>
+      }
+    </div>
+  }
+</div>
