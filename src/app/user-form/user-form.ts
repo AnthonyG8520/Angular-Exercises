@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms';
-// import { ReactiveFormsModule, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-user-form',
