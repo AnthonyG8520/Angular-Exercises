@@ -1,5 +1,6 @@
 <p>Username: {{username}}</p>
 <p>Favorite Framework: {{favoriteFramework}}</p>
+
 <label for="framework">
   Favorite Framework:
   <input type="text" id="framework" [(ngModel)]="favoriteFramework">
@@ -7,3 +8,24 @@
   <button (click)='showFramework()'>Show Framework</button>
 <!-- this button shows a click function being used to access form control values -->
 </label>
+
+<form
+  [formGroup]="jobInfoForm"
+  (ngSubmit)="handleSubmit()"
+>
+  <label>
+    Company Name
+    <input type="text" formControlName="companyName">
+  </label>
+  <br>
+  <label>
+    Company Role
+    <input type="text" formControlName="companyRole">
+  </label>
+  <br>
+  <button type="submit">Submit</button>
+</form>
+
+<h2>Job Info Form</h2>
+<p>Company Name: {{jobInfoForm.value.companyName}}</p>
+<p>Company Role: {{jobInfoForm.value.companyRole}}</p>
