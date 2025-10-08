@@ -9,6 +9,9 @@
   <div class="parent-counter">
     <p>Count value in parent component: {{ countValue }}</p>
   </div>
+<!--  when using 2 way binding you can combine the property and event bind
+    using the banana in a box [(count)]="countValue" changes must be made
+    in the ts component as well-->
 <app-counter [count]="countValue" (countIncremented)="onCountIncremented($event)"></app-counter>
 <!---->
 <router-outlet />
